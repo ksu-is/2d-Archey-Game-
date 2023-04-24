@@ -1,4 +1,4 @@
-pip import pygame
+import pygame
 import tkinter as tkr
 from tkinter.filedialog import askdirectory
 import os
@@ -28,10 +28,10 @@ def pause():
     pygame.mixer.music.pause()
 def unpause():
     pygame.mixer.music.unpause()
-Button1 = tkr.Button(music_player, width=5, height=3, font="Helvetica 12 bold", text="PLAY", command=play, bg="blue", fg="white")
+Button1 = tkr.Button(music_player, width=5, height=3, font="Helvetica 12 bold", text="PLAY", command=play, bg="green", fg="white")
 Button2 = tkr.Button(music_player, width=5, height=3, font="Helvetica 12 bold", text="STOP", command=stop, bg="red", fg="white")
-Button3 = tkr.Button(music_player, width=5, height=3, font="Helvetica 12 bold", text="PAUSE", command=pause, bg="purple", fg="white")
-Button4 = tkr.Button(music_player, width=5, height=3, font="Helvetica 12 bold", text="UNPAUSE", command=unpause, bg="orange", fg="white")
+Button3 = tkr.Button(music_player, width=5, height=3, font="Helvetica 12 bold", text="PAUSE", command=pause, bg="blue", fg="white")
+Button4 = tkr.Button(music_player, width=5, height=3, font="Helvetica 12 bold", text="UNPAUSE", command=unpause, bg="blue", fg="white")
 
 var = tkr.StringVar() 
 song_title = tkr.Label(music_player, font="Helvetica 12 bold", textvariable=var)
