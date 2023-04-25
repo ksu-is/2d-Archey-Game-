@@ -5,12 +5,12 @@ import os
 
 music_player = tkr.Tk()
 music_player.title("MUSIC BOT")
-music_player.geometry("550x450")
+music_player.geometry("900x450")
 directory = askdirectory()
 os.chdir(directory)
 song_list = os.listdir()
 
-play_list = tkr.Listbox(music_player, font="Helvetica 12 bold", bg='white', selectmode=tkr.SINGLE)
+play_list = tkr.Listbox(music_player, font="Arial 12 italic", bg='white', selectmode=tkr.SINGLE)
 for item in song_list:
     pos = 0
     play_list.insert(pos, item)
@@ -30,11 +30,11 @@ def unpause():
     pygame.mixer.music.unpause()
 def queue():
     pygame.mixer.music.queue()
-Button1 = tkr.Button(music_player, width=5, height=3, font="Helvetica 12 bold", text="PLAY", command=play, bg="green", fg="white")
-Button2 = tkr.Button(music_player, width=5, height=3, font="Helvetica 12 bold", text="STOP", command=stop, bg="red", fg="white")
-Button3 = tkr.Button(music_player, width=5, height=3, font="Helvetica 12 bold", text="PAUSE", command=pause, bg="blue", fg="white")
-Button4 = tkr.Button(music_player, width=5, height=3, font="Helvetica 12 bold", text="UNPAUSE", command=unpause, bg="blue", fg="white")
-Button5 = tkr.Button(music_player, width=5, height=3, font="Helvetica 12 bold", text="QUEUE", command=queue, bg="blue", fg="white")
+Button1 = tkr.Button(music_player, width=5, height=3, font="Arial 12 bold", text="PLAY", command=play, bg="green", fg="white")
+Button2 = tkr.Button(music_player, width=5, height=3, font="Arial 12 bold", text="STOP", command=stop, bg="red", fg="white")
+Button3 = tkr.Button(music_player, width=5, height=3, font="Arial 12 bold", text="PAUSE", command=pause, bg="blue", fg="white")
+Button4 = tkr.Button(music_player, width=5, height=3, font="Arial 12 bold", text="UNPAUSE", command=unpause, bg="blue", fg="white")
+Button5 = tkr.Button(music_player, width=5, height=3, font="Arial 12 bold", text="QUEUE", command=queue, bg="black", fg="white")
 
 var = tkr.StringVar() 
 song_title = tkr.Label(music_player, font="Helvetica 12 bold", textvariable=var)
